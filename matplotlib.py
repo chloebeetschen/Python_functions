@@ -29,13 +29,20 @@ plt.legend()
 
 
 #scatterplot
+
+labels = ['% men', '% women']
+men = [15.1, 25.2]
+women = [28.3, 30.0]
+years = ["2010", "2011"]
+
 fig2 = plt.subplots(figsize =(6, 4)) 
-plt.scatter(x, men, years, c ="blue", marker ="x")
-plt.scatter(x, women, years, c ="pink")
+plt.scatter(years, men, c ="blue", marker ="x")
+plt.scatter(years, women, c ="pink")
 plt.xlabel('Year', fontweight ='bold', fontsize = 11) 
 plt.ylabel('Percentage', fontweight ='bold', fontsize = 11) 
 plt.xticks(x, years)
 plt.legend()
 
 
+plt.legend(['% men', '% women'])
 plt.show
