@@ -4,33 +4,38 @@ import numpy as np
 
 
 labels = ['% men', '% women']
-men = [15.1, 28.3]
-women = [25.2, 30.0]
+men = [15.1, 25.2]
+women = [28.3, 30.0]
 years = [2010, 2011]
 
 #bar chart
 barWidth = 0.4
-fig = plt.subplots(figsize =(4, 6)) 
+fig = plt.subplots(figsize =(6, 4)) 
 
 # Set position of bar on X axis 
-br1 = np.arange(len(years)) 
-br2 = [x + barWidth for x in br1] 
+x = np.arange(2) 
 
 # Make the plot
-plt.bar(br1, men, color ='b', width = barWidth, label ='% men') 
-plt.bar(br2, women, color ='pink', width = barWidth, label ='% women') 
 
-# Adding Xticks 
+plt.bar(x-0.2, men, color ='blue', width = barWidth, label ='% men') 
+plt.bar(x+0.2, women, color ='pink', width = barWidth, label ='% women') 
+
+# Adding Xticks
 plt.xlabel('Year', fontweight ='bold', fontsize = 11) 
 plt.ylabel('Percentage', fontweight ='bold', fontsize = 11) 
-#plt.xticks([r + barWidth for r in range(len(men))], years)
-plt.xticks(br1, years) 
+plt.xticks(br1, years)
+plt.legend()
+
+
 
 #scatterplot
-plt.scatter(br1, men, women, years)
+fig2 = plt.subplots(figsize =(6, 4)) 
+plt.scatter(men, years, c ="blue", marker = 'x')
+plt.scatter(women, years, c ="pink")
 plt.xlabel('Year', fontweight ='bold', fontsize = 11) 
 plt.ylabel('Percentage', fontweight ='bold', fontsize = 11) 
 
 
 plt.legend()
+plt.show
 plt.show
