@@ -23,19 +23,19 @@ plt.bar(x+0.2, women, color ='pink', width = barWidth, label ='% women')
 # Adding Xticks
 plt.xlabel('Year', fontweight ='bold', fontsize = 11) 
 plt.ylabel('Percentage', fontweight ='bold', fontsize = 11) 
-plt.xticks(br1, years)
+plt.xticks(x, years)
 plt.legend()
 
 
 
 #scatterplot
 fig2 = plt.subplots(figsize =(6, 4)) 
-plt.scatter(men, years, c ="blue", marker = 'x')
-plt.scatter(women, years, c ="pink")
+plt.scatter(x, men, years, c ="blue", marker ="x")
+plt.scatter(x, women, years, c ="pink")
 plt.xlabel('Year', fontweight ='bold', fontsize = 11) 
 plt.ylabel('Percentage', fontweight ='bold', fontsize = 11) 
-
-
+plt.xticks(x, years)
 plt.legend()
-plt.show
+
+
 plt.show
